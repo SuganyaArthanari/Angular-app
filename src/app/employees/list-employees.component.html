@@ -1,0 +1,7 @@
+<div class="form-group"> 
+  <input type="text" class="form-control" style="width:300px" 
+      placeholder="Search by Name" [(ngModel)] = "searchby"/>
+</div>
+<div *ngFor="let employee of employees| employeeFilter : searchby">
+  <app-displaycomponent [employee] = employee></app-displaycomponent>
+</div>
